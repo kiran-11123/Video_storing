@@ -10,7 +10,7 @@ if (!region || !accessKeyId || !secretAccessKey) {
     throw new Error("AWS environment variables are missing");
 }
 
-export const s3 = new S3Client({
+export const s3Client = new S3Client({
     region,
     credentials: {
         accessKeyId,

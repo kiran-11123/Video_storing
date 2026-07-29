@@ -7,9 +7,7 @@ const MONGO_URL = process.env.MONGO_URL
 const ConnectDB = async()=>{
       
     try{
-
         await mongoose.connect(`${MONGO_URL}/video_uploader`)
-
         console.log('mongodb is connected')
 
     }

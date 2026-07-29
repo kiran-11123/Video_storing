@@ -1,62 +1,18 @@
-import mongoose from "mongoose";
-declare const metadata: mongoose.Model<{
+import mongoose, { Document } from "mongoose";
+export interface IVideo extends Document {
     title: string;
+    type: 'video' | 'image' | 'audio';
     path: string;
-    size: string;
-}, {}, {}, {
-    id: string;
-}, mongoose.Document<unknown, {}, {
-    title: string;
-    path: string;
-    size: string;
-}, {
-    id: string;
-}, mongoose.DefaultSchemaOptions> & Omit<{
-    title: string;
-    path: string;
-    size: string;
-} & {
+    size: number;
+    mimeType: string;
+    status: "Pending" | "Uploaded";
+}
+declare const metadata: mongoose.Model<IVideo, {}, {}, {}, Document<unknown, {}, IVideo, {}, mongoose.DefaultSchemaOptions> & IVideo & Required<{
     _id: mongoose.Types.ObjectId;
-} & {
+}> & {
     __v: number;
-}, "id"> & mongoose.HydratedDocumentOverrides<{
+} & {
     id: string;
-}>, mongoose.Schema<any, mongoose.Model<any, any, any, any, any, any, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, {
-    title: string;
-    path: string;
-    size: string;
-}, mongoose.Document<unknown, {}, {
-    title: string;
-    path: string;
-    size: string;
-}, {
-    id: string;
-}, mongoose.DefaultSchemaOptions> & Omit<{
-    title: string;
-    path: string;
-    size: string;
-} & {
-    _id: mongoose.Types.ObjectId;
-} & {
-    __v: number;
-}, "id"> & mongoose.HydratedDocumentOverrides<{
-    id: string;
-}>, unknown, {
-    title: string;
-    path: string;
-    size: string;
-} & {
-    _id: mongoose.Types.ObjectId;
-} & {
-    __v: number;
-}>, {
-    title: string;
-    path: string;
-    size: string;
-} & {
-    _id: mongoose.Types.ObjectId;
-} & {
-    __v: number;
-}>;
+}, any, IVideo>;
 export default metadata;
 //# sourceMappingURL=video_metadata.d.ts.map
