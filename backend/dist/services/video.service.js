@@ -3,13 +3,15 @@ import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 import crypto from 'crypto';
 import { s3Client } from "../db_config/s3_config/s3.js";
 import metadata from "../db_config/video_metadata.js";
+import dotenv from 'dotenv';
+dotenv.config();
 export const upload_video_service = async (title, fileName, mimeType, size) => {
     try {
         const videoId = crypto.randomUUID();
         const extension = fileName.split(".").pop();
         const key = `videos/${videoId}.${extension}`;
         const command = new PutObjectCommand({
-            Bucket: process.env.AWS_BUCKET_NAME,
+            Bucket: process.env.AWS_S3_BUCKET_NAME,
             Key: key,
             ContentType: mimeType
         });

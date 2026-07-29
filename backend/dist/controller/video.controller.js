@@ -20,6 +20,7 @@ export const createUploadURL = async (req, res) => {
         });
     }
     catch (er) {
+        console.log(er);
         return res.status(500).json({
             message: 'Internal Server Error'
         });

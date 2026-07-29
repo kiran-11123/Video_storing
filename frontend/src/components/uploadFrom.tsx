@@ -28,6 +28,7 @@ export default function UploadForm() {
 
       const { uploadURL, key } = response.data;
 
+
       await axios.put(uploadURL, file, {
         headers: {
           "Content-Type": file.type,
