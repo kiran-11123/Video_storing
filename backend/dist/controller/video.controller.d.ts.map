@@ -1,1 +1,1 @@
-{"version":3,"file":"video.controller.d.ts","sourceRoot":"","sources":["../../src/controller/video.controller.ts"],"names":[],"mappings":"AAAA,OAAQ,KAAK,EAAE,OAAO,EAAG,QAAQ,EAAE,MAAM,SAAS,CAAC;AAKnD,eAAO,MAAM,eAAe,QAAe,OAAO,OAAQ,QAAQ,gDAuCjE,CAAA"}
+{"version":3,"file":"video.controller.d.ts","sourceRoot":"","sources":["../../src/controller/video.controller.ts"],"names":[],"mappings":"AAAA,OAAQ,KAAK,EAAE,OAAO,EAAG,QAAQ,EAAE,MAAM,SAAS,CAAC;AAKnD,eAAO,MAAM,eAAe,QAAe,OAAO,OAAQ,QAAQ,gDAyCjE,CAAA"}

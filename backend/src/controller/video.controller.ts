@@ -37,6 +37,8 @@ export const createUploadURL = async(req  :Request , res: Response)=>{
     }
     catch(er){
 
+        console.log(er);
+
         return res.status(500).json({
             message : 'Internal Server Error'
         })
