@@ -1,12 +1,13 @@
 import express from 'express'
 import cors from 'cors'
-import multer from 'multer'
-
+import dotenv from 'dotenv'
+import ConnectDB from './db_config/db.js'
 
 const app = express();
+dotenv.config();
 app.use(cors())
 app.use(express.json())
-
+await ConnectDB();
 
 
 
